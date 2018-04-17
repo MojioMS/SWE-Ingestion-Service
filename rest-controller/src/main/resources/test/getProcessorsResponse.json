@@ -1,0 +1,29 @@
+{
+    "_embedded": {
+        "appRegistrationResourceList": [
+            {
+                "name": "csv-processor",
+                "type": "processor",
+                "uri": "file://C:/Develop/2018/n52/SWE-Ingestion-Service/csv-processor/target/csv-processor-0.0.1-SNAPSHOT-metadata.jar",
+                "version": null,
+                "defaultVersion": false,
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:9393/apps/processor/csv-processor"
+                    }
+                }
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "http://localhost:9393/apps?page=0&size=20"
+        }
+    },
+    "page": {
+        "size": 20,
+        "totalElements": 1,
+        "totalPages": 1,
+        "number": 0
+    }
+}

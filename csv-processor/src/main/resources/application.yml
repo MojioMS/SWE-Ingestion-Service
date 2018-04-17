@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: processor-app
+
+  cloud:
+    stream:
+      bindings:
+        input:
+          group: haliho
+          destination: demo
+        output:
+          group: haliho
+          destination: log
+
+server:
+  port: 8083
+
+org.n52.stream:
+  sensorml-url: http://localhost:9080/AggregateProcess.xml
+  offering: WL-ECO-FLNTU-4476/observations
+  sensor: WL-ECO-FLNTU-4476
+
+logging:
+  level:
+    org.n52.stream.seadatacloud.processors: TRACE

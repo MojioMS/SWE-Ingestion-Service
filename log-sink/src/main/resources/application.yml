@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: sink-app
+
+  cloud:
+    stream:
+      bindings:
+        input:
+          group: haliho
+          destination: log
+
+server:
+  port: 8082

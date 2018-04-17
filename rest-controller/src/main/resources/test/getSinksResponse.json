@@ -1,0 +1,41 @@
+{
+    "_embedded": {
+        "appRegistrationResourceList": [
+            {
+                "name": "db-sink",
+                "type": "sink",
+                "uri": "file://C:/Develop/2018/n52/SWE-Ingestion-Service/db-sink/target/db-sink-0.0.1-SNAPSHOT.jar",
+                "version": null,
+                "defaultVersion": false,
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:9393/apps/sink/db-sink"
+                    }
+                }
+            },
+            {
+                "name": "log-sink",
+                "type": "sink",
+                "uri": "file://C:/Develop/2018/n52/SWE-Ingestion-Service/log-sink/target/log-sink-0.0.1-SNAPSHOT.jar",
+                "version": null,
+                "defaultVersion": false,
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:9393/apps/sink/log-sink"
+                    }
+                }
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "http://localhost:9393/apps?page=0&size=20"
+        }
+    },
+    "page": {
+        "size": 20,
+        "totalElements": 2,
+        "totalPages": 1,
+        "number": 0
+    }
+}

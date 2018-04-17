@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2018-2018 52°North Initiative for Geospatial Open Source
+    Software GmbH
+
+    This program is free software; you can redistribute it and/or modify it
+    under the terms of the GNU General Public License version 2 as published
+    by the Free Software Foundation.
+
+    If the program is linked with libraries which are licensed under one of
+    the following licenses, the combination of the program with the linked
+    library is not considered a "derivative work" of the program:
+
+        - Apache License, version 2.0
+        - Apache Software License, version 1.0
+        - GNU Lesser General Public License, version 3
+        - Mozilla Public License, versions 1.0, 1.1 and 2.0
+        - Common Development and Distribution License (CDDL), version 1.0
+
+    Therefore the distribution of the program linked with libraries licensed
+    under the aforementioned licenses, is permitted by the copyright holders
+    if the distribution is compliant with both the GNU General Public
+    License version 2 and the aforementioned licenses.
+
+    This program is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+-->
+<sml:AggregateProcess gml:id="sdc" xmlns:swe="http://www.opengis.net/swe/2.0" xmlns:sml="http://www.opengis.net/sensorml/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:sf="http://www.opengis.net/sampling/2.0" xsi:schemaLocation="http://www.opengis.net/sensorml/2.0 http://schemas.opengis.net/sensorML/2.0/sensorML.xsd http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd">
+   <sml:components>
+      <sml:ComponentList>
+         <sml:component name="source_output">
+            <sml:PhysicalSystem gml:id="marine-fluo">
+               <gml:identifier codeSpace="uniqueID">WL-ECO-FLNTU-4476</gml:identifier>
+               <sml:identification>
+                  <sml:IdentifierList>
+                     <sml:identifier>
+                        <sml:Term definition="http://vocab.nerc.ac.uk/collection/W07/current/IDEN0002/">
+                           <sml:label>Long name</sml:label>
+                           <sml:value>Galway Bay Cable Observatory Fluorometer</sml:value>
+                        </sml:Term>
+                     </sml:identifier>
+                     <sml:identifier>
+                        <sml:Term definition="http://vocab.nerc.ac.uk/collection/W07/current/IDEN0006/">
+                           <sml:label>Short name</sml:label>
+                           <sml:value>Galway Bay Cable Observatory Fluorometer</sml:value>
+                        </sml:Term>
+                     </sml:identifier>
+                     <sml:identifier>
+                        <sml:Term definition="http://vocab.nerc.ac.uk/collection/W07/current/IDEN0012/">
+                           <sml:label>Manufacturer</sml:label>
+                           <sml:value>WetLabs</sml:value>
+                        </sml:Term>
+                     </sml:identifier>
+                     <sml:identifier>
+                        <sml:Term definition="http://vocab.nerc.ac.uk/collection/W07/current/IDEN0003/">
+                           <sml:label>Model name</sml:label>
+                           <sml:value>ECO-FLNTU</sml:value>
+                        </sml:Term>
+                     </sml:identifier>
+                     <sml:identifier>
+                        <sml:Term definition="http://vocab.nerc.ac.uk/collection/W07/current/IDEN0005/">
+                           <sml:label>Serial number</sml:label>
+                           <sml:value>3137</sml:value>
+                        </sml:Term>
+                     </sml:identifier>
+                  </sml:IdentifierList>
+               </sml:identification>
+               <sml:featuresOfInterest>
+                  <sml:FeatureList definition="http://www.opengis.net/def/featureOfInterest/identifier">
+                     <swe:label>Galway Bay Cable Observatory</swe:label>
+                     <sml:feature>
+                        <sams:SF_SpatialSamplingFeature gml:id="galway-bay-cable-observatory">
+                            <gml:identifier codeSpace="">Galway Bay Cable Observatory</gml:identifier>
+                            <gml:name>Galway Bay Cable Observatory</gml:name>
+                            <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint" />
+                            <sf:sampledFeature xlink:href="http://www.opengis.net/def/nil/OGC/0/unknown" />
+                            <sams:shape>
+                                <gml:Point gml:id="point-galway-bay-cable-observatory">
+                                    <gml:pos srsName="http://www.opengis.net/def/crs/EPSG/0/4326">53.227317 -9.265783</gml:pos>
+                                </gml:Point>
+                            </sams:shape>
+                        </sams:SF_SpatialSamplingFeature>
+                    </sml:feature>
+                  </sml:FeatureList>
+               </sml:featuresOfInterest>
+               <sml:outputs>
+                  <sml:OutputList>
+                     <sml:output name="fluorometerOutput">
+                        <sml:DataInterface>
+                           <sml:data>
+                              <swe:DataStream>
+                                 <swe:elementType name="fluorometerOutputStream">
+                                    <swe:DataRecord>
+                                       <swe:field name="datetime">
+                                          <swe:Time definition="http://www.opengis.net/def/property/OGC/0/ResultTime">
+                                             <swe:label>Date and time</swe:label>
+                                             <swe:description>Date-time is a time stamp from a Global Positioning System receiver at the cable observatory shore station in the format YYYY-MM-DDThh:mm:ss.sss .</swe:description>
+                                             <swe:uom/>
+                                          </swe:Time>
+                                       </swe:field>
+                                       <swe:field name="instrument_id">
+                                          <swe:Text>
+                                             <swe:label>Instrument ID</swe:label>
+                                             <swe:description>Instrument-ID is a unique identifier for the instrument based on its manufacturer, model number and serial number</swe:description>
+                                          </swe:Text>
+                                       </swe:field>
+                                       <swe:field name="Instrument_datetime">
+                                          <swe:Time definition="http://www.opengis.net/def/property/OGC/0/PhenomenonTime">
+                                             <swe:label>Instrument date</swe:label>
+                                             <swe:description>Instrument clock date in the format MM/DD/YYYY</swe:description>
+                                             <swe:uom/>
+                                          </swe:Time>
+                                       </swe:field>
+                                       <swe:field name="Wavelength_for_Fluorescence_Measurements">
+                                          <swe:Quantity>
+                                             <swe:label>Wavelength of light used to make fluorescence measurements</swe:label>
+                                             <swe:description>Wavelength of light used to make fluorescence measurements in nanometres</swe:description>
+                                             <swe:uom code="nm" />
+                                          </swe:Quantity>
+                                       </swe:field>
+                                       <swe:field name="Fluorescence">
+                                          <swe:Count definition="http://vocab.nerc.ac.uk/collection/B39/current/fluorescence/">
+                                             <swe:label>Fluorescence</swe:label>
+                                             <swe:description>Chlorophyll fluorometer instrument output (counts) (no units)</swe:description>
+                                          </swe:Count>
+                                       </swe:field>
+                                       <swe:field name="Wavelength_for_Turbidity_Measurements">
+                                          <swe:Quantity>
+                                             <swe:label>Wavelength of light used to make turbidity measurements</swe:label>
+                                             <swe:description>Wavelength of light used to make turbidity measurements in nanometres</swe:description>
+                                             <swe:uom code="nm"/>
+                                          </swe:Quantity>
+                                       </swe:field>
+                                       <swe:field name="Turbidity">
+                                          <swe:Count definition="http://vocab.nerc.ac.uk/collection/P01/current/TURBXXXX/">
+                                             <swe:label>Turbidity</swe:label>
+                                             <swe:description>Optical scattering turbidity sensor instrument output (counts) (no units)</swe:description>
+                                          </swe:Count>
+                                       </swe:field>
+                                       <swe:field name="Thermistor">
+                                          <swe:Quantity>
+                                             <swe:uom/>
+                                          </swe:Quantity>
+                                       </swe:field>
+                                    </swe:DataRecord>
+                                 </swe:elementType>
+                                 <swe:encoding>
+                                    <swe:TextEncoding tokenSeparator=";" blockSeparator="\n"/>
+                                 </swe:encoding>
+                                 <swe:values/>
+                              </swe:DataStream>
+                           </sml:data>
+                           <sml:interfaceParameters>
+                              <swe:DataRecord>
+                                 <swe:field name="source_type">
+                                    <swe:Text definition="source_type">
+                                       <swe:value>mqtt</swe:value>
+                                    </swe:Text>
+                                 </swe:field>
+                                 <swe:field name="mqtt_broker_url">
+                                    <swe:Text definition="url">
+                                       <swe:value>tcp://mqtt.marine.ie</swe:value>
+                                    </swe:Text>
+                                 </swe:field>
+                                 <swe:field name="mqtt_broker_username">
+                                    <swe:Text definition="username">
+                                       <swe:value>username</swe:value>
+                                    </swe:Text>
+                                 </swe:field>
+                                 <swe:field name="mqtt_broker_password">
+                                    <swe:Text definition="password">
+                                       <swe:value>password</swe:value>
+                                    </swe:Text>
+                                 </swe:field>
+                                 <swe:field name="topic_name">
+                                    <swe:Text definition="topic">
+                                       <swe:value>spiddal-fluorometer</swe:value>
+                                    </swe:Text>
+                                 </swe:field>
+                              </swe:DataRecord>
+                           </sml:interfaceParameters>
+                        </sml:DataInterface>
+                     </sml:output>
+                  </sml:OutputList>
+               </sml:outputs>
+               <sml:position>
+                  <swe:Vector referenceFrame="urn:ogc:def:crs:EPSG::4326">
+                     <swe:coordinate name="easting">
+                        <swe:Quantity axisID="x">
+                           <swe:uom code="degree"/>
+                           <swe:value>-9.265783</swe:value>
+                        </swe:Quantity>
+                     </swe:coordinate>
+                     <swe:coordinate name="northing">
+                        <swe:Quantity axisID="y">
+                           <swe:uom code="degree"/>
+                           <swe:value>53.227317</swe:value>
+                        </swe:Quantity>
+                     </swe:coordinate>
+                     <swe:coordinate name="altitude">
+                        <swe:Quantity axisID="z">
+                           <swe:uom code="m"/>
+                           <swe:value>52.0</swe:value>
+                        </swe:Quantity>
+                     </swe:coordinate>
+                  </swe:Vector>
+               </sml:position>
+            </sml:PhysicalSystem>
+         </sml:component>
+         <sml:component name="sos_input">
+            <sml:PhysicalSystem gml:id="marine-fluo-sos">
+               <gml:identifier codeSpace="uniqueID">WL-ECO-FLNTU-4476</gml:identifier>
+               <sml:identification>
+                  <sml:IdentifierList>
+                     <sml:identifier>
+                        <sml:Term definition="http://vocab.nerc.ac.uk/collection/W07/current/IDEN0002/">
+                           <sml:label>Long name</sml:label>
+                           <sml:value>Galway Bay Cable Observatory Fluorometer</sml:value>
+                        </sml:Term>
+                     </sml:identifier>
+                     <sml:identifier>
+                        <sml:Term definition="http://vocab.nerc.ac.uk/collection/W07/current/IDEN0006/">
+                           <sml:label>Short name</sml:label>
+                           <sml:value>Galway Bay Cable Observatory Fluorometer</sml:value>
+                        </sml:Term>
+                     </sml:identifier>
+                     <sml:identifier>
+                        <sml:Term definition="http://vocab.nerc.ac.uk/collection/W07/current/IDEN0012/">
+                           <sml:label>Manufacturer</sml:label>
+                           <sml:value>WetLabs</sml:value>
+                        </sml:Term>
+                     </sml:identifier>
+                     <sml:identifier>
+                        <sml:Term definition="http://vocab.nerc.ac.uk/collection/W07/current/IDEN0003/">
+                           <sml:label>Model name</sml:label>
+                           <sml:value>ECO-FLNTU</sml:value>
+                        </sml:Term>
+                     </sml:identifier>
+                     <sml:identifier>
+                        <sml:Term definition="http://vocab.nerc.ac.uk/collection/W07/current/IDEN0005/">
+                           <sml:label>Serial number</sml:label>
+                           <sml:value>3137</sml:value>
+                        </sml:Term>
+                     </sml:identifier>
+                  </sml:IdentifierList>
+               </sml:identification>
+               <sml:featuresOfInterest>
+                  <sml:FeatureList definition="http://www.opengis.net/def/featureOfInterest/identifier">
+                    <swe:label>Galway Bay Cable Observatory</swe:label>
+                    <sml:feature>
+                        <sams:SF_SpatialSamplingFeature gml:id="galway-bay-cable-observatory">
+                            <gml:identifier codeSpace="">Galway Bay Cable Observatory</gml:identifier>
+                            <gml:name>52°North</gml:name>
+                            <sf:type xlink:href="http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint" />
+                            <sf:sampledFeature xlink:href="http://www.opengis.net/def/nil/OGC/0/unknown" />
+                            <sams:shape>
+                                <gml:Point gml:id="point-galway-bay-cable-observatory">
+                                    <gml:pos srsName="http://www.opengis.net/def/crs/EPSG/0/4326">53.227317 -9.265783</gml:pos>
+                                </gml:Point>
+                            </sams:shape>
+                        </sams:SF_SpatialSamplingFeature>
+                    </sml:feature>
+                  </sml:FeatureList>
+               </sml:featuresOfInterest>
+               <sml:outputs>
+                  <sml:OutputList>
+                     <sml:output name="Fluorescence">
+                        <swe:Count definition="http://vocab.nerc.ac.uk/collection/B39/current/fluorescence/">
+                           <swe:label>Fluorescence</swe:label>
+                           <swe:description>Chlorophyll fluorometer instrument output (counts) (no units)</swe:description>
+                        </swe:Count>
+                     </sml:output>
+                     <sml:output name="Turbidity">
+                        <swe:Count definition="http://vocab.nerc.ac.uk/collection/P01/current/TURBXXXX/">
+                           <swe:label>Turbidity</swe:label>
+                           <swe:description>Optical scattering turbidity sensor instrument output (counts) (no units)</swe:description>
+                        </swe:Count>
+                     </sml:output>
+                  </sml:OutputList>
+               </sml:outputs>
+               <sml:position>
+                  <swe:Vector referenceFrame="urn:ogc:def:crs:EPSG::4326">
+                     <swe:coordinate name="easting">
+                        <swe:Quantity axisID="x">
+                           <swe:uom code="degree"/>
+                           <swe:value>-9.265783</swe:value>
+                        </swe:Quantity>
+                     </swe:coordinate>
+                     <swe:coordinate name="northing">
+                        <swe:Quantity axisID="y">
+                           <swe:uom code="degree"/>
+                           <swe:value>53.227317</swe:value>
+                        </swe:Quantity>
+                     </swe:coordinate>
+                     <swe:coordinate name="altitude">
+                        <swe:Quantity axisID="z">
+                           <swe:uom code="m"/>
+                           <swe:value>52.0</swe:value>
+                        </swe:Quantity>
+                     </swe:coordinate>
+                  </swe:Vector>
+               </sml:position>
+            </sml:PhysicalSystem>
+         </sml:component>
+      </sml:ComponentList>
+   </sml:components>
+   <sml:connections>
+      <sml:ConnectionList>
+         <sml:connection>
+            <sml:Link>
+               <sml:source ref="components/marine-fluo/outputs/Fluorescence"/>
+               <sml:destination ref="components/marine-fluo-sos/outputs/Fluorescence"/>
+            </sml:Link>
+         </sml:connection>
+         <sml:connection>
+            <sml:Link>
+               <sml:source ref="components/marine-fluo/outputs/Turbidity"/>
+               <sml:destination ref="components/marine-fluo-sos/outputs/Turbidity"/>
+            </sml:Link>
+         </sml:connection>
+      </sml:ConnectionList>
+   </sml:connections>
+</sml:AggregateProcess>
